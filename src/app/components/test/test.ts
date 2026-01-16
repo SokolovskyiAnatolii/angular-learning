@@ -11,6 +11,8 @@ export class TestComponent {
   fisrstName = 'Анатолій';
   secondName = 'Соколовський';
 
+  isEnabled: boolean = true;
+
   getFullName(): string {
     return `Мене звати ${this.fisrstName} ${this.secondName}`;
   }
