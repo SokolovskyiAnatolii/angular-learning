@@ -17,6 +17,12 @@ export class TestComponent {
   isActive: boolean = true;
   isDisabled: boolean = false;
 
+  isClickedState: boolean = false;
+
+  toggleState(): void {
+    this.isClickedState = !this.isClickedState;
+  }
+
   getFullName(): string {
     return `Мене звати ${this.fisrstName} ${this.secondName}`;
   }
