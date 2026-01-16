@@ -4,6 +4,10 @@
 
   <p>{{ getFullName() }}</p>
 
+  <p [ngStyle]="{color: 'red'}">Тут використано ngStyle</p>
+  <p [ngClass]="{'active': isActive, 'disabled': isDisabled}">Тут використано ngClass</p>
+  
+
   <button [disabled]="!isEnabled">Click Me</button>
 
 </div>

@@ -1,8 +1,9 @@
+import { CommonModule} from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-test',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './test.html',
   styleUrl: './test.scss',
 })
@@ -11,7 +12,10 @@ export class TestComponent {
   fisrstName = 'Анатолій';
   secondName = 'Соколовський';
 
-  isEnabled: boolean = true;
+  isEnabled: boolean = false;
+
+  isActive: boolean = true;
+  isDisabled: boolean = false;
 
   getFullName(): string {
     return `Мене звати ${this.fisrstName} ${this.secondName}`;

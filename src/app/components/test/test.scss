@@ -1,3 +1,7 @@
+div {
+  text-align: center;
+  background-color: #ffd8a5;
+}
 p {
   color: blue;
 }
@@ -21,6 +25,15 @@ button:hover {
 }
 button:disabled {
   background-color: #A9A9A9;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.active {
+  background-color: #007BFF;
+}
+.disabled {
+  background-color: #6c757d;
   color: #999;
   cursor: not-allowed;
 }
