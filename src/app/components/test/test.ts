@@ -1,9 +1,10 @@
 import { CommonModule} from '@angular/common';
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-test',
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './test.html',
   styleUrl: './test.scss',
 })
@@ -18,6 +19,8 @@ export class TestComponent {
   isDisabled: boolean = false;
 
   isClickedState: boolean = false;
+
+  inputText: string = '';
 
   toggleState(): void {
     this.isClickedState = !this.isClickedState;

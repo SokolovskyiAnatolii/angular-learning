@@ -1,17 +1,19 @@
 <div>
   <p>test works!</p>
   <p>{{ title }}</p>
-
+<!--
   <p>{{ getFullName() }}</p>
 
   <p [ngStyle]="{color: 'red'}">Тут використано ngStyle</p>
   <p [ngClass]="{'active': isActive, 'disabled': isDisabled}">Тут використано ngClass</p>
 
-
-  <!-- <button [disabled]="!isEnabled">Click Me</button> -->
+ <button [disabled]="!isEnabled">Click Me</button>
 
   <div class="event-example" [ngClass]="{'clicked': isClickedState}"> </div>
 
-  <button (click)="toggleState()">Перемкни стейт</button>
+  <button (click)="toggleState()">Перемкни стейт</button> -->
+
+  <input type="text" [(ngModel)] = "inputText" />
+  <p>{{ inputText }}</p>
 
 </div>
