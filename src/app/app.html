@@ -1,2 +1,3 @@
 <p>Це app компонент</p>
-<app-test></app-test>
+<p>{{ manageMessageFromChild }}</p>
+<app-test [childMassage]="massageFromParent" (parentMassage)="handleMessageFromChild($event)">  </app-test>
