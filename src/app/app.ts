@@ -10,4 +10,6 @@ import { TestComponent } from './components/test/test';
 })
 export class App {
   protected readonly title = signal('my-first-app');
+
+  massageFromParent: string = 'Повідомлення від App компонента';
 }
