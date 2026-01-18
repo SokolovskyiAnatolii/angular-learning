@@ -1,5 +1,5 @@
 import { CommonModule} from '@angular/common';
-import { Component, Input} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -25,6 +25,8 @@ export class TestComponent {
   // -----------------------------------------------------
 
 @Input ( ) childMassage: string = '';
+
+@Output ( ) parentMassage = new EventEmitter<string> ( ) ;
   // -----------------------------------------------------
 
   toggleState(): void {
@@ -35,4 +37,8 @@ export class TestComponent {
     return `Мене звати ${this.fisrstName} ${this.secondName}`;
   }
 
+
+  sendMessageToParent(): void {
+    this.parentMassage.emit('Повідомлення від Test компонента');
+  }
 }

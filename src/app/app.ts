@@ -11,5 +11,13 @@ import { TestComponent } from './components/test/test';
 export class App {
   protected readonly title = signal('my-first-app');
 
+  manageMessageFromChild: string = '';
+
+  handleMessageFromChild(message: string): void {
+    this.manageMessageFromChild = message;
+    console.log('Повідомлення від дочірнього компонента:', message);
+  }
+
+
   massageFromParent: string = 'Повідомлення від App компонента';
 }
