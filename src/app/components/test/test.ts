@@ -23,6 +23,10 @@ export class TestComponent {
 
   inputText: string = '';
 
+  today: Date = new Date();
+
+  price: number = 1234.56;
+
 users =[ 'Alice', 'Bob', 'Charlie', 'David', 'Eve'];
 
 Items = [
