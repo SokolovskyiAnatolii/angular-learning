@@ -1,6 +1,6 @@
 <div>
-  <p>test works!</p>
-  <p>{{ title }}</p>
+  <!-- <p>test works!</p>
+  <p>{{ title }}</p> -->
 <!--
   <p>{{ getFullName() }}</p>
 
@@ -33,10 +33,48 @@
     <li>{{ i + 1 }}: {{ user }}</li>
   </ul> -->
 
-  <div [ngSwitch]="appState">
+  <!-- <div [ngSwitch]="appState">
     <p *ngSwitchCase="'active'">Додаток активний</p>
     <p *ngSwitchCase="'pending'">Додаток в очікуванні</p>
     <p *ngSwitchCase="'inactive'">Додаток неактивний</p>
     <p *ngSwitchDefault>Статус додатку невідомий</p>
-  </div>
+  </div> -->
+
+  <!-- @if(isClickedState) {
+    <p>Кнопка була натиснута</p>
+  }
+  @else {
+    <p>Кнопка не була натиснута</p>
+  }
+  <button (click)="toggleState()">Перемкни стейт</button> -->
+
+  <!-- @for (user of users; track user; let i = $index) {
+    <li>{{ i + 1 }}: {{ user }}</li>
+  }
+  @empty {
+    <p>Список користувачів порожній</p>
+  } -->
+
+    @for (Item of Items; track Item.id; let i = $index, e = $even, o = $odd) {
+    <li>{{ i + 1 }}: {{ Item.name }}</li>
+  }
+  @empty {
+    <p>Список фруктів порожній</p>
+  }
+
+@switch (appState) {
+  @case ('active') {
+    <p>Додаток активний</p>
+  }
+  @case ('pending') {
+    <p>Додаток в очікуванні</p>
+  }
+  @case ('inactive') {
+    <p>Додаток неактивний</p>
+  }
+  @default {
+    <p>Статус додатку невідомий</p>
+  }
+}
+
 </div>

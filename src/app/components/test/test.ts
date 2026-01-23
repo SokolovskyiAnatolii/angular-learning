@@ -25,6 +25,14 @@ export class TestComponent {
 
 users =[ 'Alice', 'Bob', 'Charlie', 'David', 'Eve'];
 
+Items = [
+  { 'id': 1, 'name': 'Apple' },
+  { 'id': 2, 'name': 'Banana' },
+  { 'id': 3, 'name': 'Cherry' },
+  { 'id': 4, 'name': 'Date' },
+  { 'id': 5, 'name': 'Elderberry'}
+];
+
 appState = 'pending';
 
   // -----------------------------------------------------
