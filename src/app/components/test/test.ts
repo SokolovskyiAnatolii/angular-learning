@@ -23,6 +23,10 @@ export class TestComponent {
 
   inputText: string = '';
 
+users =[ 'Alice', 'Bob', 'Charlie', 'David', 'Eve'];
+
+appState = 'pending';
+
   // -----------------------------------------------------
 
 @Input ( ) childMassage: string = '';

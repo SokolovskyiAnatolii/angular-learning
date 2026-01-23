@@ -21,5 +21,22 @@
     <button (click)="sendMessageToParent()">Відправити повідомлення батьку</button> -->
 
 
-    <p appHighlight [highlightColor] = "'blue'">Наведи на мене курсор, щоб підсвітити мене!</p>
+    <!-- <p appHighlight [highlightColor] = "'blue'">Наведи на мене курсор, щоб підсвітити мене!</p> -->
+
+    <!-- <p *ngIf="isClickedState; else notClickedState">Кнопка була натиснута  </p>
+    <ng-template #notClickedState>
+      <p>Кнопка не була натиснута</p>
+    </ng-template>
+    <button (click)="toggleState()">Перемкни стейт</button> -->
+
+  <!-- <ul *ngFor="let user of users; index as i">
+    <li>{{ i + 1 }}: {{ user }}</li>
+  </ul> -->
+
+  <div [ngSwitch]="appState">
+    <p *ngSwitchCase="'active'">Додаток активний</p>
+    <p *ngSwitchCase="'pending'">Додаток в очікуванні</p>
+    <p *ngSwitchCase="'inactive'">Додаток неактивний</p>
+    <p *ngSwitchDefault>Статус додатку невідомий</p>
+  </div>
 </div>
