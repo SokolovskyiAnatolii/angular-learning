@@ -2,10 +2,11 @@ import { CommonModule} from '@angular/common';
 import { Component, EventEmitter, Input, Output} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Highlight } from '../../directives/highlight';
+import { TruncatePipe } from '../../pipes/truncate-pipe';
 
 @Component({
   selector: 'app-test',
-  imports: [CommonModule, FormsModule, Highlight],
+  imports: [CommonModule, FormsModule, Highlight, TruncatePipe],
   templateUrl: './test.html',
   styleUrl: './test.scss',
 })
@@ -22,6 +23,10 @@ export class TestComponent {
   isClickedState: boolean = false;
 
   inputText: string = '';
+
+  today: Date = new Date();
+
+  price: number = 1234.56;
 
 users =[ 'Alice', 'Bob', 'Charlie', 'David', 'Eve'];
 

@@ -55,7 +55,7 @@
     <p>Список користувачів порожній</p>
   } -->
 
-    @for (Item of Items; track Item.id; let i = $index, e = $even, o = $odd) {
+    <!-- @for (Item of Items; track Item.id; let i = $index, e = $even, o = $odd) {
     <li>{{ i + 1 }}: {{ Item.name }}</li>
   }
   @empty {
@@ -75,6 +75,24 @@
   @default {
     <p>Статус додатку невідомий</p>
   }
-}
+} -->
+
+<p>{{ today | date: "shortDate" }}</p>
+
+<p>{{"hello word" | uppercase}}</p>
+
+<p>{{"HELLO WORD" | lowercase}}</p>
+
+<p>{{ price | currency: "USD": "symbol":"1.2-2" }}</p>
+
+<p>{{1234.56789 | number: "1.0-0"}}</p>
+
+<p>{{0.5 | percent}}</p>
+
+<p>{{"HELLO WORD" | slice: 1 : 5}}</p>
+
+<p>{{{name: "John", age: 30} | json}}</p>
+
+<p>{{"Lorem ipsum dolor sit amet, consectetur adipiscing elit" | truncate: 20}}</p>
 
 </div>
