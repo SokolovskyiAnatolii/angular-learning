@@ -1,5 +1,27 @@
-<p>Це app компонент</p>
+<!-- <p>Це app компонент</p> -->
 <!-- <p>{{ manageMessageFromChild }}</p>
 <app-test [childMassage]="massageFromParent" (parentMassage)="handleMessageFromChild($event)">  </app-test>
 <app-todo></app-todo> -->
-<app-form></app-form>
+<!-- <app-form></app-form> -->
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav">
+    <div class="side-bar-title">
+      <h2>Categories</h2>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/angular">Angular</a>
+      <a mat-list-item routerLink="/typescript">Typescript</a>
+      <a mat-list-item routerLink="/javascript">Javascript</a>
+      <a mat-list-item routerLink="/rxjs">Rxjs</a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <a mat-list-item routerLink="/home">Interview preparation</a>
+    </mat-toolbar>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
